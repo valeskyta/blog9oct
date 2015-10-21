@@ -14,3 +14,4 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:comment)
   end
 end
+

@@ -12,8 +12,13 @@ class PostsController < ApplicationController
   # def show
   #   @comment = @post.comments.build
   # end
+  # def show
+  #   @last_comments = @post.comments.last(5)
+  # end
+
   def show
-    @last_comments = @post.comments.last(5)
+    @comment = @post.comments.build
+    @last_comments = @post.comments.last(5)#se agrega para poder llamar a los comentarios desde las vistas
   end
 
   # GET /posts/new
